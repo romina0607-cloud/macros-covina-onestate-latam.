@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12345a">
+<title>Macros OneState LATAM</title>
+<style>
+:root{--navy:#12345a;--blue:#2463a6;--red:#d93645;--ink:#1b2635;--muted:#66758a;--bg:#f3f6fa;--line:#dce4ee;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{background:linear-gradient(135deg,var(--navy),#1c568d);color:white;padding:24px 18px 22px;border-bottom:5px solid var(--red)}
+.header-inner{max-width:760px;margin:auto}
+.brand{display:flex;align-items:center;gap:13px}
+.logo{width:48px;height:48px;flex:0 0 48px;border-radius:14px;background:white;color:var(--red);display:grid;place-items:center;font-size:27px;font-weight:900}
+h1{font-size:clamp(1.35rem,5vw,1.9rem);line-height:1.15;margin:0}
+.subtitle{margin:7px 0 0;color:#dce9f7;font-size:.92rem}
+main{max-width:760px;margin:0 auto;padding:18px 14px 38px}
+.tools{position:sticky;top:0;z-index:2;background:var(--bg);padding:4px 0 13px}
+.search{width:100%;border:1px solid var(--line);border-radius:13px;padding:14px 15px;font-size:1rem;background:white;outline-color:var(--blue);box-shadow:0 3px 12px #163b5b0a}
+.count{font-size:.83rem;color:var(--muted);margin:9px 3px 0}
+.macro{display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:13px;padding:14px;margin:0 0 10px;box-shadow:0 3px 10px #163b5b08}
+.macro:nth-of-type(4n){border-left-color:var(--red)}
+.macro-text{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.45;font-size:.96rem;flex:1;min-width:0}
+.copy{border:0;border-radius:10px;background:var(--navy);color:white;padding:11px 12px;font-weight:700;font-size:.84rem;min-width:78px;min-height:42px;cursor:pointer;touch-action:manipulation}
+.copy:active{transform:scale(.97)}
+.copy.done{background:#18794e}
+.empty{padding:24px;text-align:center;color:var(--muted);display:none}
+footer{text-align:center;color:var(--muted);font-size:.78rem;padding:14px 0 4px}
+@media(min-width:600px){main{padding-top:22px}.macro{padding:16px}.copy{min-width:90px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+.nav-sections{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:thin}
+.nav-sections a{white-space:nowrap;text-decoration:none;background:#fff;border:1px solid var(--line);color:var(--navy);font-size:.85rem;font-weight:750;padding:10px 12px;border-radius:999px}
+.info-section{scroll-margin-top:110px;margin:24px 0 30px}
+.section-heading{display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--red);padding:0 0 10px;margin:0 0 14px}
+.section-heading h2{margin:0;color:var(--navy);font-size:1.2rem;line-height:1.2}
+.section-heading .section-icon{background:#e9f0f8;color:var(--blue);border-radius:10px;padding:10px;font-size:1.25rem}
+.info-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px;margin:0 0 10px}
+.info-card h3{margin:0 0 7px;color:var(--blue);font-size:1rem}
+.info-card p{margin:5px 0;line-height:1.45}
+.info-card .sanction{color:#b42332;font-weight:750}
+.rule-code{display:inline-block;color:var(--red);font-weight:850;margin-right:6px}
+.info-grid{display:grid;grid-template-columns:1fr;gap:10px}
+.notice{border-left:4px solid #e0a21b;background:#fff8e6;padding:13px;border-radius:10px;line-height:1.45;margin:12px 0}
+@media(min-width:620px){.info-grid{grid-template-columns:1fr 1fr}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">✚</div>
+      <div>
+        <h1>Macros OneState LATAM</h1>
+        <p class="subtitle">Servicios Médicos · Panel de macros para copiar</p>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="tools">
+    <input class="search" id="search" type="search" placeholder="Buscar una macro..." aria-label="Buscar una macro">
+    <div class="count" id="count" aria-live="polite">29 macros</div>
+  </div>
+
+  <nav class="nav-sections" aria-label="Apartados de información">
+    <a href="#macros">Macros</a>
+    <a href="#reglas-medicas">Reglas del rol médico</a>
+    <a href="#reglas-rp">Reglas de rol (RP)</a>
+    <a href="#normas-hospital">Normas del personal</a>
+    <a href="#guia-hospital">Guía del hospital</a>
+    <a href="#lugares-rcp">Lugares prohibidos para RCP</a>
+  </nav>
+  <section id="macros" aria-label="Lista de macros">
+    <article class="macro"><div class="macro-text">/flobby (10-8) En Servicio Laboral.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby (10-7) Fuera de Servicio.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby (10-4) Entendido o De Acuerdo.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do Administrar medicamentos a pacientes.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do Por favor, espere un poco y podré administrar medicamentos /kit /pastillas.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby Necesito reabastecimiento de medicamentos.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do POR FAVOR, ciudadano, no podemos atender pacientes con pistola dentro del área médica. (Baje su pistola.)</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do Si ya fue curado, puede retirarse del hospital, por favor.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby Preparando vehículo médico.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby En camino a localización de entrega de medicamentos.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby SOLICITO PERMISO PARA HACER RCP CON UN INSTRUCTOR.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do Encender Sirenas (Llamada de emergencia en curso.)</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby En ruta a llamada de emergencia.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do En Localización/Escena De Emergencia.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/me Emergencias Médicas de LATAM ha llegado. Mantenga la calma.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/me Por favor, despeje la zona. Persona herida.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do Cámara de Cuerpo encendida.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do Iniciar acceso a signos vitales de pacientes.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do Aplicar Botiquín y Realizar Primeros Auxilios en Paciente.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do Paciente fuera de peligro.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/me Los Médicos no te ayudarán durante una balacera o en una zona de peligro/riesgo para el personal médico.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do ¡Taser! ¡Taser! ¡Taser! Para escapar de peligro!</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby (Código Rojo) Sala de hospital fuera de control.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby (Código Azul) Se requiere oficial en el hospital. Persona fuera de control o no abandona el hospital.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby (Código Verde) Todas las llamadas de emergencia resueltas.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby Entrenando Nuevo Enfermero /Macros/Rol/Servicios Médicos.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/flobby Ignorar lo anunciado o lo siguiente</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/do La zona de Cafetería es EXCLUSIVA para médicos, POR FAVOR despeje el sitio y proceda a ir al pasillo para ser atendido, o se llamara a Policía para ser escoltado.</div><button class="copy" type="button">Copiar</button></article>
+    <article class="macro"><div class="macro-text">/me Hola, mi nombre es (Tu Nombre ). Enfermero de Servicios Médicos de OneState LATAM.</div><button class="copy" type="button">Copiar</button></article>
+  </section>
+  <div class="empty" id="empty">No se encontraron macros.</div>
+
+  <section class="info-section" id="reglas-medicas">
+    <div class="section-heading"><span class="section-icon">✚</span><h2>Reglas del rol médico</h2></div>
+    <div class="info-card"><h3><span class="rule-code">MD1</span>Negativa de servicio</h3><p>No se puede negar atención médica, curación o reanimación sin una razón válida de rol, excepto si la vida del médico está en peligro.</p><p><b>Ejemplo:</b> El médico deberá atender siempre al paciente, salvo que su vida corra peligro o sea agredido verbalmente.</p><p class="sanction">Sanción: 1 reprimenda.</p></div>
+    <div class="info-card"><h3><span class="rule-code">MD2</span>Riesgo innecesario</h3><p>Está prohibido curar o vender medicinas durante tiroteos o situaciones peligrosas.</p><p><b>Ejemplo:</b> El médico espera que la zona sea segura para atender a un herido.</p><p class="sanction">Sanción: 1 advertencia.</p></div>
+    <div class="info-card"><h3><span class="rule-code">MD3</span>Reglas del proyecto</h3><p>Hay una obligación total de seguir las normas generales del servidor.</p><p><b>Ejemplo:</b> El médico respeta las normas de comunicación y comportamiento establecidas por el servidor.</p><p class="sanction">Sanción: de 1 advertencia a 1 reprimenda.</p></div>
+    <div class="info-card"><h3><span class="rule-code">MD4</span>Rol y respeto</h3><p>Se debe mantener un comportamiento de rol adecuado (RP). Incluye prohibiciones sobre faltar al respeto (4.1) o desobedecer la cadena de mando (4.2).</p><p><b>Ejemplo:</b> Un médico sigue las instrucciones del jefe de guardia y trata con respeto a los pacientes.</p><p class="sanction">Sanción: desde advertencia hasta expulsión.</p></div>
+    <div class="info-card"><h3><span class="rule-code">MD4.3 y MD5</span>Violencia</h3><p>Está prohibido atacar civiles o usar cualquier tipo de arma.</p><p><b>Ejemplo:</b> El médico se retira del lugar y solicita apoyo policial en lugar de intervenir con violencia.</p><p class="sanction">Sanción: expulsión inmediata.</p></div>
+    <div class="info-card"><h3><span class="rule-code">MD6</span>Criminalidad</h3><p>No se permite aliarse con bandas o cometer delitos (robos, asesinatos, etc.).</p><p><b>Ejemplo:</b> El médico rechaza tener contacto con pandillas y cometer delitos como el asesinato.</p><p class="sanction">Sanción: expulsión inmediata.</p></div>
+    <div class="info-card"><h3><span class="rule-code">MD7 y MD7.1</span>Vehículos</h3><p>No se permite usar ambulancias para fines personales ni usar autos particulares para realizar labores de la facción.</p><p><b>Ejemplo:</b> El médico utiliza la ambulancia únicamente para emergencias y traslados autorizados.</p><p class="sanction">Sanción: 1 advertencia.</p></div>
+    <div class="info-card"><h3><span class="rule-code">MD8</span>Certificados</h3><p>Los certificados médicos solo se emiten en el hospital y nunca por compensación monetaria.</p><p><b>Ejemplo:</b> El médico entrega certificados solamente en el hospital y sin cobrar dinero extra.</p><p class="sanction">Sanción: 1 advertencia.</p></div>
+    <div class="notice"><b>Nota sobre sanciones:</b> una advertencia consiste en una llamada de atención verbal. Una reprimenda queda registrada en el expediente del empleado. Al acumular 3 reprimendas, se procede al despido automático del empleado.</div>
+  </section>
+
+  <section class="info-section" id="reglas-rp">
+    <div class="section-heading"><span class="section-icon">⚖️</span><h2>Reglas de juego de rol (RP) — OneState</h2></div>
+    <div class="info-grid">
+      <div class="info-card"><h3>RP1 · Daño sin motivo</h3><p>Infligir daño o matar al personaje de otro jugador sin motivo RP.</p><p><b>Ejemplo:</b> Atacar y matar a otro jugador sin conflicto previo de rol.</p><p class="sanction">Castigo: 20 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP2 · Daño a vehículos</h3><p>Infligir daño o destruir el vehículo de otro jugador sin motivo RP.</p><p><b>Ejemplo:</b> Chocar o destruir el vehículo de otro jugador sin razón de rol.</p><p class="sanction">Castigo: 20 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP3 · Capacidades físicas</h3><p>Exceder las capacidades físicas del personaje RP.</p><p><b>Ejemplo:</b> Saltar edificios imposibles o correr más rápido de lo que el personaje puede.</p><p class="sanction">Castigo: 10 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP4 · Lógica del rol</h3><p>Violación de la lógica de acción del personaje RP y creación de situaciones poco realistas.</p><p><b>Ejemplo:</b> Disparar desde un lugar donde no me verían o hago cosas ilógicas para mi personaje.</p><p class="sanction">Castigo: 15 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP5 · Información del mundo real</h3><p>Usar información del mundo real en RP.</p><p><b>Ejemplo:</b> Uso de mapas externos o datos del mundo real para tener ventaja en el rol.</p><p class="sanction">Castigo: de 30 minutos de silencio a 60 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP6 · Rechazo del rol</h3><p>Rechazo del proceso de juego de rol para beneficio personal.</p><p><b>Ejemplo:</b> Me niego a rolear situaciones que me incomodan solo para obtener ventaja.</p><p class="sanction">Castigo: de 30 a 60 minutos de cárcel en OneState, dependiendo de la frecuencia.</p></div>
+      <div class="info-card"><h3>RP7 · Uso de comandos</h3><p>Desequilibrio en el juego de rol mediante comandos como /dar /me /try.</p><p><b>Ejemplo:</b> Uso estos comandos para tener éxito automático o ventaja sin rol.</p><p class="sanction">Castigo: 20 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP8 · Inactividad (AFK)</h3><p>Falta de actividad en el juego por parte del jugador durante más de 5 minutos.</p><p><b>Ejemplo:</b> Quedarse AFK en medio de una situación de rol importante.</p><p class="sanction">Castigo: desconexión del servidor.</p></div>
+      <div class="info-card"><h3>RP9 · Daño con vehículo</h3><p>Dañar o matar al personaje de otro jugador con cualquier vehículo.</p><p><b>Ejemplo:</b> Atropellar o matar a otro jugador sin motivo de rol.</p><p class="sanction">Castigo: 60 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP9.1 · Daño múltiple con vehículo</h3><p>Dañar o matar a más de 5 personajes de los guardias con cualquier vehículo.</p><p><b>Ejemplo:</b> Atropellar a 5 o más guardias intencionalmente con mi vehículo.</p><p class="sanction">Castigo: 60 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP10 · Regresar tras la muerte</h3><p>Matar o perseguir a un jugador después de su muerte. Regresar al lugar de la muerte anterior en un plazo de 15 minutos o hasta que finalice la situación en la que murió el personaje.</p><p><b>Ejemplo:</b> Volver al lugar donde maté a alguien para seguir atacándolo.</p><p class="sanction">Castigo: 90 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP11 · Zonas verdes</h3><p>Cometer delitos o atacar a otros jugadores en zonas verdes o zonas de trabajo y vehículos de trabajo. También está prohibido acechar o matar a los jugadores que estén en las zonas verdes.</p><p><b>Ejemplo:</b> Atacar a alguien que está trabajando de granjero o repartidor en zona verde.</p><p class="sanction">Castigo: de 30 a 60 minutos de cárcel en OneState según la gravedad.</p></div>
+      <div class="info-card"><h3>RP12 · Secuestro poco realista</h3><p>Cualquier intento de secuestro en el que el número de jugadores secuestradores sea superior al 50% del número total de secuestradores se considera poco realista.</p><p><b>Ejemplo:</b> Secuestro con más de la mitad de mi propia facción o sin chance para que la víctima se defienda.</p><p class="sanction">Castigo: 30 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP13 · Comportamiento no RP</h3><p>Comportamiento no RP dentro de las facciones del juego. Incluye la liberación ilegal de prisioneros o la ejecución de civiles por parte de la policía.</p><p><b>Ejemplo:</b> Policía libera a su amigo de prisión sin rol o mata a un civil sin razón.</p><p class="sanction">Castigo: expulsión de la facción y de 30 a 60 minutos de cárcel en OneState, si así se determina.</p></div>
+      <div class="info-card"><h3>RP14 · Acoso sexual</h3><p>Cualquier forma de acción sexual no consentida, incluyendo insinuaciones y diálogos/acciones explícitas. El uso de insultos étnicos y/o LGBTQ+ también está prohibido. Todas las acciones sexuales requieren consentimiento.</p><p><b>Ejemplo:</b> Insistir con conversaciones o acciones sexuales que el otro jugador no quiere.</p><p class="sanction">Castigo: 60 minutos de silencio o 24 horas hasta 30 días de ban.</p></div>
+      <div class="info-card"><h3>RP15 · Interrupción de operaciones</h3><p>Está prohibido provocar intencionadamente a los miembros de la facción por diversión o perturbar las operaciones.</p><p><b>Ejemplo:</b> Entrar a molestar a una facción mientras realizan operaciones importantes.</p><p class="sanction">Castigo: 30 minutos de cárcel en OneState.</p></div>
+      <div class="info-card"><h3>RP16 · Amenazas al personal</h3><p>Atacar o amenazar al personal médico, militar o policía.</p><p><b>Ejemplo:</b> Atacar o amenazar a paramédicos, militares o policías mientras atienden una emergencia.</p><p class="sanction">Castigo: expulsión inmediata de OneState si así se determina.</p></div>
+    </div>
+    <div class="notice"><b>Nota sobre sanciones:</b> una advertencia consiste en una discusión verbal sobre la situación. Una reprimenda se registra en el expediente personal. Al acumular 3 reprimendas, se procede al despido automático del empleado.</div>
+  </section>
+
+  <section class="info-section" id="normas-hospital">
+    <div class="section-heading"><span class="section-icon">🛡️</span><h2>Normas y recomendaciones para el personal del hospital</h2></div>
+    <div class="info-card"><h3>01 · Áreas de curado</h3><p>No está permitido curar en áreas de entrada o recepción. Las curaciones deben realizarse en pasillos del hospital.</p><p class="sanction">Esta área es exclusiva para supervisores.</p></div>
+    <div class="info-card"><h3>02 · Reabastecimiento</h3><p>No está permitido esperar suministros médicos en el cuarto de reabastecimiento; evitar obstrucciones.</p><p class="sanction">Recibirá una advertencia o incluso una reprimenda.</p></div>
+    <div class="info-card"><h3>03 · Punto rojo</h3><p>No está permitido utilizar ambulancias ni vehículos en el punto rojo de piso 0.</p><p>Solamente pueden utilizarlos de bata gris en adelante.</p></div>
+    <div class="info-card"><h3>04 · Radio o walkie-talkie</h3><p>No está permitido el uso de la radio o walkie-talkie en los rangos VERDE, BLANCO y AZUL.</p><p class="sanction">Recibirá una advertencia en caso de utilizarla o incluso una reprimenda.</p></div>
+    <div class="info-card"><h3>05 · Anuncios y macros</h3><p>Mantenerse atento a los anuncios o macros que envían los altos rangos, ya que contienen información importante.</p></div>
+    <div class="info-card"><h3>06 · Grabaciones</h3><p>Se recomienda grabar al salir fuera de servicio o incluso cuando hacen servicio para tener un respaldo en caso de reporte.</p><p class="sanction">Ayuda a resolver situaciones de manera rápida y eficaz.</p></div>
+    <div class="notice"><b>Respeto · Responsabilidad · Comunicación · Seguridad.</b> Trabajamos juntos por la vida.</div>
+  </section>
+
+  <section class="info-section" id="guia-hospital">
+    <div class="section-heading"><span class="section-icon">🏥</span><h2>Guía del hospital — One Med Services</h2></div>
+    <div class="info-grid">
+      <div class="info-card"><h3>1 · Zona de curado</h3><p>Área destinada exclusivamente para la atención y curación de pacientes.</p><p>• Mantén el orden y el respeto.</p><p>• Solo personal médico autorizado.</p></div>
+      <div class="info-card"><h3>2 · Zona de reabastecimiento de medicamentos</h3><p>Zona habilitada para reabastecer botiquines y medicamentos.</p><p>• Solo para personal médico.</p><p>• No permanecer en la zona innecesariamente.</p><p>• Reabastece lo necesario y deja el lugar libre.</p></div>
+      <div class="info-card"><h3>3 · Punto rojo exclusivo para altos rangos</h3><p>Punto de acceso exclusivo para altos rangos de la facción.</p><p>• Solo personal con rango autorizado.</p><p>• El uso indebido será sancionado.</p><p>• Respeta la jerarquía y las normas.</p></div>
+      <div class="info-card"><h3>4 · Ambulancia de entrega de medicamentos</h3><p>Ambulancia asignada para la entrega de medicamentos a otras zonas o unidades.</p><p>• Úsala únicamente para entregas.</p><p>• Conduce con cuidado y responsabilidad.</p><p>• Reporta cualquier incidente.</p></div>
+    </div>
+    <div class="notice"><b>Recuerda:</b> tu rol es salvar vidas, mantener el orden y representar a la Alianza Médica con orgullo. Respeto · Empatía · Disciplina · Compromiso.</div>
+  </section>
+
+  <section class="info-section" id="lugares-rcp">
+    <div class="section-heading"><span class="section-icon">🚫</span><h2>Lugares prohibidos para hacer RCP</h2></div>
+    <p>Según la imagen de referencia, estos lugares aparecen señalados como prohibidos para realizar RCP:</p>
+    <div class="info-grid">
+      <div class="info-card"><h3>1 · Hospital</h3><p>No realizar RCP en este lugar.</p></div>
+      <div class="info-card"><h3>2 · Comisaría</h3><p>No realizar RCP en este lugar.</p></div>
+      <div class="info-card"><h3>3 · Venta de autos</h3><p>No realizar RCP en este lugar.</p></div>
+      <div class="info-card"><h3>4 · Armería</h3><p>No realizar RCP en este lugar.</p></div>
+      <div class="info-card"><h3>5 · AKM</h3><p>Zona señalada como prohibida para RCP.</p></div>
+      <div class="info-card"><h3>6 · Base militar</h3><p>No realizar RCP en este lugar.</p></div>
+      <div class="info-card"><h3>7 · Guarida de pandilla</h3><p>No realizar RCP en este lugar.</p></div>
+      <div class="info-card"><h3>8 · Bar</h3><p>No realizar RCP en este lugar.</p></div>
+      <div class="info-card"><h3>9 · Taxi</h3><p>Zona/vehículo señalado como prohibido para RCP.</p></div>
+      <div class="info-card"><h3>10 · Casino</h3><p>No realizar RCP en este lugar.</p></div>
+      <div class="info-card"><h3>11 · Puerto</h3><p>No realizar RCP en este lugar.</p></div>
+    </div>
+    <div class="notice">La imagen enviada muestra más contenido parcialmente cortado en la parte inferior; este apartado incluye los lugares que se alcanzan a leer con claridad.</div>
+  </section>
+
+  <footer>Macros OneState LATAM · Hecho para usar desde el celular</footer>
+</main>
+<script>
+const search = document.getElementById('search');
+const cards = [...document.querySelectorAll('.macro')];
+const count = document.getElementById('count');
+const empty = document.getElementById('empty');
+function updateSearch(){
+  const q = search.value.trim().toLocaleLowerCase('es');
+  let visible = 0;
+  cards.forEach(card => {
+    const match = card.querySelector('.macro-text').textContent.toLocaleLowerCase('es').includes(q);
+    card.hidden = !match;
+    if(match) visible++;
+  });
+  count.textContent = `${visible} ${visible === 1 ? 'macro' : 'macros'}`;
+  empty.style.display = visible ? 'none' : 'block';
+}
+search.addEventListener('input', updateSearch);
+async function copyText(text){
+  if(navigator.clipboard && window.isSecureContext){
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+  const area = document.createElement('textarea');
+  area.value = text;
+  area.style.position = 'fixed';
+  area.style.opacity = '0';
+  document.body.appendChild(area);
+  area.focus(); area.select();
+  const ok = document.execCommand('copy');
+  area.remove();
+  if(!ok) throw new Error('No se pudo copiar automáticamente');
+}
+cards.forEach(card => {
+  const button = card.querySelector('.copy');
+  button.addEventListener('click', async () => {
+    const original = button.textContent;
+    try {
+      await copyText(card.querySelector('.macro-text').textContent);
+      button.textContent = '¡Copiada!';
+      button.classList.add('done');
+      setTimeout(() => { button.textContent = original; button.classList.remove('done'); }, 1300);
+    } catch(e) {
+      button.textContent = 'Selecciona texto';
+      const range = document.createRange();
+      range.selectNodeContents(card.querySelector('.macro-text'));
+      const selection = window.getSelection();
+      selection.removeAllRanges(); selection.addRange(range);
+    }
+  });
+});
+</script>
+</body>
+</html>
